@@ -1,0 +1,27 @@
+﻿@{
+    var productCount = ViewBag.ProductCount;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Замовлення товарів</title>
+</head>
+<body>
+    <h2>Замовлення Піци</h2>
+    <form asp-action="OrderProducts" method="post">
+        @for (int i = 0; i < productCount; i++)
+        {
+            <br>
+            <div>
+                <label>Назва товару:</label>
+                <input type="text" name="products[@i].Name" />
+                <label>Кількість:</label>
+                <input type="number" name="products[@i].Quantity" min="1" />
+            </div>
+            
+        }
+        <button type="submit">Замовити</button>
+    </form>
+</body>
+</html>

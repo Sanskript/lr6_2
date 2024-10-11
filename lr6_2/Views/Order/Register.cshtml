@@ -1,0 +1,34 @@
+﻿
+@model User
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Реєстрація</title>
+</head>
+<body>
+    <h2>Реєстрація</h2>
+    <form asp-action="Register" method="post">
+        <div>
+            <label>Ім'я:</label>
+            <input asp-for="Name" />
+            <span asp-validation-for="Name"></span>
+            
+        </div>
+        </br>
+        <div>
+            <label>Вік:</label>
+            <input asp-for="Age" type="number" />
+            <span asp-validation-for="Age"></span>
+        </div>
+        </br>
+        <div>
+            <label>Скільки піц ви хочете замовити:</label>
+            <input asp-for="ProductCount" type="number" min="0" />
+            <span asp-validation-for="ProductCount"></span>
+        </div>
+        </br>
+        <button type="submit">Підтвердити</button>
+    </form>
+</body>
+</html>
+  

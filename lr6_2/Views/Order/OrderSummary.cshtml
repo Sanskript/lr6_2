@@ -1,0 +1,28 @@
+﻿@model Product[]
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Підсумок замовлення</title>
+</head>
+<body>
+    <h2>Ваше замовлення</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Назва піци</th>
+                <th>Кількість</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Quantity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
