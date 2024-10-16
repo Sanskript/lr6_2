@@ -1,6 +1,5 @@
 ﻿using lr6_2.Models;
 using Microsoft.AspNetCore.Mvc;
-using lr6_2.Models;
 
 namespace lr6_2.Controllers
 {
